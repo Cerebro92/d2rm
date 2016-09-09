@@ -1,0 +1,714 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" 
+"http://www.w3.org/TR/html4/loose.dtd">
+<body>
+<div id="wrapper" ><div>
+
+<div class="col-lg-12"> 
+
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#"><strong>Data Driven Reputation Managment</strong></a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse" aria-expanded="false" style="height: 1px;">
+        
+        
+        <ul class="nav navbar-nav">
+        <li style="margin:0;">
+           <img width="50" src="/static/img/dpslogo.jpg"/>
+        </li>
+        <li><p class="client-name">Delhi Public School</p></li>
+</ul>
+
+<ul class="nav navbar-nav navbar-right">
+
+	<li><a href="#"><i class="fa fa-cog"></i></a></li>
+	<li><a href="#"><i class="fa fa-envelope"></i><span class="badge">5</span></a></li>
+	
+	<li class="dropdown user-dropdown"><a href="#"class="dropdown-toggle user-cat" data-toggle="dropdown"><i class="fa fa-user"></i></a>
+		<ul class="dropdown-menu">
+			<!-- <li><a href="#"><i class="fa fa-user"></i> Profile</a></li>
+			<li><a href="#"><i class="fa fa-gear"></i> Settings</a></li> -->
+			<li><a href="#"><i class="fa fa-changepassword"></i>Change Password</a>
+			<li class="divider"></li>
+			<li><a href="logout.action"><i class="fa fa-power-off"></i> Log Out</a></li>
+		</ul>
+	</li>
+	
+</ul>
+        
+      
+        </div>
+      </div>
+    </nav>
+
+
+</div>
+<div id="cDialog"></div>
+
+
+	</div>
+	<div class="col-lg-2 nopadding">
+	<div class="left-bar">
+		
+
+<div class="logo">
+            <a href="dashboard">
+                 <img src="/static/img/logo.png" alt="" />
+            </a>
+ </div>
+	<div class="menu-bar">
+		<ul class="nav navbar-nav">        
+            <li><a class="active" href="#tab1" data-toggle="tab"><i class="fa fa-tachometer" aria-hidden="true"></i>&nbsp;Dashboard</a></li>
+			<li><a href="#tab2" data-toggle="tab"><i class="fa fa-area-chart" aria-hidden="true"></i>&nbsp;Reviews category</a></li>
+			<li><a href="#tab3" data-toggle="tab"><i class="fa fa-line-chart" aria-hidden="true"></i>&nbsp;DPS Reviews</a></li>
+			<li><a href="#tab4" data-toggle="tab"><i class="fa fa-pie-chart" aria-hidden="true"></i>&nbsp;DPS Negative Reviews</a></li>
+			<li><a href="#tab5" data-toggle="tab"><i class="fa fa-bar-chart" aria-hidden="true"></i>&nbsp;Amity Positive Reviews</a></li>
+			<li><a href="#tab6" data-toggle="tab"><i class="fa fa-area-chart" aria-hidden="true"></i>&nbsp;GD Goenka Positive Reviews</a></li>
+            <li><a href="#tab7" data-toggle="tab"><i class="fa fa-line-chart" aria-hidden="true"></i>&nbsp;GD Goenka Negative Reviews</a></li>
+            <li><a href="#tab8" data-toggle="tab"><i class="fa fa-pie-chart" aria-hidden="true"></i>&nbsp;Ryan Positive Reviews</a></li>
+            <li><a href="#tab9" data-toggle="tab"><i class="fa fa-bar-chart" aria-hidden="true"></i>&nbsp;Ryan Negative Reviews</a></li>
+            <li><a href="#tab10" data-toggle="tab"><i class="fa fa-area-chart" aria-hidden="true"></i>&nbsp;Don Bosco Positive Reviews</a></li>
+            <li><a href="#tab11" data-toggle="tab"><i class="fa fa-line-chart" aria-hidden="true"></i>&nbsp;Don Bosco Negative Reviews</a></li>
+            <li><a href="#tab12" data-toggle="tab"><i class="fa fa-pie-chart" aria-hidden="true"></i>&nbsp;Geolocation</a></li>
+            <li><a href="#tab13" data-toggle="tab"><i class="fa fa-pie-chart" aria-hidden="true"></i>&nbsp;Sample</a></li>		
+		</ul>
+	</div>
+  
+
+		</div>
+	</div>
+	<div class="col-lg-10 col-md-9 col-sm-8 col-xs-6 pull-right">	
+		<div class="page-wrapper" style="margin-top:50px; margin-left:20px;">			
+			 
+	
+			<div class="">
+				<div class="col-lg-12 middleContainer" >
+				<div class="col-lg-12 all_alerts_outer" style="display:none;">
+				<div class="all_alerts">
+				<div class="col-lg-3">
+				<a href="#"><div class="adam_top"> <p><img src="/static/img/adam.png" alt="" />A.D.A.M</p></div></a>
+				<a href="#"><div class="critical" data-toggle="tooltip" data-placement="bottom" title="Critical"><p>5</p></div></a>
+				<a href="#"><div class="warning" data-toggle="tooltip" data-placement="bottom" title="Warning"><p>3</p></div></a>
+				<a href="#"><div class="good" data-toggle="tooltip" data-placement="bottom" title="Good"><p>63</p></div></a>
+				</div>
+				<div class="col-lg-3">
+				<a href="#"><div class="eve_top"><p><img src="/static/img/eve.png" alt="" />E.V.E</p></div></a>
+				<a href="#"><div class="critical" data-toggle="tooltip" data-placement="bottom" title="Critical"><p>5</p></div></a>
+				<a href="#"><div class="warning" data-toggle="tooltip" data-placement="bottom" title="Warning"><p>3</p></div></a>
+				<a href="#"><div class="good" data-toggle="tooltip" data-placement="bottom" title="Good"><p>36</p></div></a>
+				</div>
+				<div class="col-lg-3">
+				<a href="#"><div class="dm_top"><p><img src="/static/img/dm.png" alt="" />D.M</p></div></a>
+				<a href="#"><div class="critical" data-toggle="tooltip" data-placement="bottom" title="Critical"><p>55</p></div></a>
+				<a href="#"><div class="warning" data-toggle="tooltip" data-placement="bottom" title="Warning"><p>53</p></div></a>
+				<a href="#"><div class="good" data-toggle="tooltip" data-placement="bottom" title="Good"><p>3</p></div></a>
+				</div>
+				<div class="col-lg-3">
+				<a href="#"><div class="grid_top"><p><img src="/static/img/grid.png" alt="" />G.R.I.D</p></div></a>
+				<a href="#"><div class="critical" data-toggle="tooltip" data-placement="bottom" title="Critical"><p>35</p></div></a>
+				<a href="#"><div class="warning" data-toggle="tooltip" data-placement="bottom" title="Warning"><p>53</p></div></a>
+				<a href="#"><div class="good" data-toggle="tooltip" data-placement="bottom" title="Good"><p>36</p></div></a>
+				</div>
+				</div>
+				</div>
+							
+                         
+					 <!-- <h1><i class="fa fa-tachometer"></i>&nbsp;Dashboard </h1> -->
+                    <div class="tab-content">                    
+                        <div class="col-lg-12 tab-pane in active" id="tab1">
+                         <div class="row">
+                                    <div class="col-md-3 col-sm-6 col-xs-12">
+                                      <div class="info-box">
+                                        <span class="info-box-icon bg-aqua"><i class="fa fa-arrows"></i></span>
+                                        <div class="info-box-content">
+                                          <span class="info-box-text">Total Reviews</span>
+                                          <span class="info-box-number">5000</span>
+                                        </div><!-- /.info-box-content -->
+                                      </div><!-- /.info-box -->
+                                    </div><!-- /.col -->
+                                    <div class="col-md-3 col-sm-6 col-xs-12">
+                                      <div class="info-box">
+                                        <span class="info-box-icon bg-green"><i class="fa fa-thumbs-up"></i></span>
+                                        <div class="info-box-content">
+                                          <span class="info-box-text">Positive Reviews</span>
+                                          <span class="info-box-number">4000</span>
+                                        </div><!-- /.info-box-content -->
+                                      </div><!-- /.info-box -->
+                                    </div><!-- /.col -->
+                        
+                                    <!-- fix for small devices only -->
+                                    <div class="clearfix visible-sm-block"></div>
+                        
+                                    <div class="col-md-3 col-sm-6 col-xs-12">
+                                      <div class="info-box">
+                                        <span class="info-box-icon bg-red"><i class="fa fa-thumbs-down"></i></span>
+                                        <div class="info-box-content">
+                                          <span class="info-box-text">Negative Reviews</span>
+                                          <span class="info-box-number">1000</span>
+                                        </div><!-- /.info-box-content -->
+                                      </div><!-- /.info-box -->
+                                    </div><!-- /.col -->
+                                    <div class="col-md-3 col-sm-6 col-xs-12">
+                                      <div class="info-box">
+                                        <span class="info-box-icon bg-yellow"><i class="fa fa-user-plus"></i></span>
+                                        <div class="info-box-content">
+                                          <span class="info-box-text">New Members</span>
+                                          <span class="info-box-number">20</span>
+                                        </div><!-- /.info-box-content -->
+                                      </div><!-- /.info-box -->
+                                    </div><!-- /.col -->                
+                           	</div>
+                         
+                               <div class="row">
+                                    <div class="col-lg-3 col-xs-6">
+                                      <!-- small box -->
+                                      <div class="small-box bg-aqua">
+                                        <div class="inner">
+                                          <h3>Top sources</h3>
+                                          <table style="width:100%" cellpadding="2">
+                                              <tbody>
+                                                <tr>
+                                                  <td class="text-nowrap"><div class="cell-label" title="">Mouthshut</div></td>
+                                                  <td class="text-nowrap">4000</td>
+                                                </tr>
+                                                <tr>
+                                                  <td class="text-nowrap"><div class="cell-label" title="">Facebook</div></td>
+                                                  <td class="text-nowrap">3000</td>
+                                                </tr>
+                                                <tr>
+                                                  <td class="text-nowrap"><div class="cell-label" title="">Complaint board</div></td>
+                                                  <td class="text-nowrap">3000</td>
+                                                </tr>
+                                              </tbody>
+                                            </table>
+                                        </div>
+                                        <div class="icon">
+                                          <i class="fa fa-arrow-up"></i>
+                                        </div>
+                                        <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+                                      </div>
+                                    </div><!-- ./col -->
+                                    <div class="col-lg-3 col-xs-6">
+                                      <!-- small box -->
+                                      <div class="small-box bg-green">
+                                        <div class="inner">
+                                          <h3>Latest update</h3>
+                                          <p>2 September, 2016</p>
+                                        </div>
+                                        <div class="icon">
+                                         <i class="fa fa-pencil-square"></i>
+                                        </div>
+                                        <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+                                      </div>
+                                    </div><!-- ./col -->
+                                   
+                                    <div class="col-lg-3 col-xs-6">
+                                      <!-- small box -->
+                                      <div class="small-box bg-red">
+                                        <div class="inner">
+                                          <h3>Best Features</h3>
+                                          <p>Keep it up 1</p>
+                                          <p>Keep it up 2</p>
+                                          <p>Keep it up 3</p>
+                                          <p>Keep it up 4</p>
+                                          <p>Keep it up 5</p>
+                                        </div>
+                                        <div class="icon">
+                                          <i class="fa fa-bell"></i>
+                                        </div>
+                                        <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+                                      </div>
+                                    </div><!-- ./col -->
+                                     <div class="col-lg-3 col-xs-6">
+                                      <!-- small box -->
+                                      <div class="small-box bg-yellow">
+                                        <div class="inner">
+                                          <h3>Efforts</h3>
+                                          <p>Effort 1</p>
+                                          <p>Effort 2</p>
+                                          <p>Effort 3</p>
+                                          <p>Effort 4</p>
+                                        </div>
+                                        <div class="icon">
+                                          <i class="fa fa-exclamation-triangle"></i>
+                                        </div>
+                                        <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+                                      </div>
+                                    </div><!-- ./col -->
+                             </div>
+							
+          						
+          					
+                           
+                         	<div class="tab-pane" style="margin-bottom:25px;">
+                                <div class="ui-state-default panel-height">
+                                <div id="sourceWiseReviewsDiv" class="tile-container" >
+                                <h3 class="title">&nbsp;&nbsp;&nbsp;Top Sources</h3>	
+                                    <div class="chart-type">
+                                       <p class="chart-type-label">Chart Type</p>
+                                       <select name="charttypeDeptt" id="charttypeDeptt" class="form-control">
+                                              <option value="pie">Pie Chart</option>	
+                                              <option value="bar">Bar Chart</option>	
+                                              <option value="doughnut">Donut Chart</option>
+                                              <option value="column">column Chart</option>
+                                        </select>               
+                                    </div>								
+                                    <div class="inner-container">									
+                                        <div id="sourceWiseContainer" data-percent="0" data-whetherrendered ="0" class="donut"></div>									
+                                        </div>									
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="tab-pane">
+                                <div class="ui-state-default panel-height">
+                                    <div id="consoWiseReviewsDiv" class="tile-container" >
+                                       <h3 class="title">&nbsp;&nbsp;&nbsp;Consolidated Reviews</h3>	
+                                        <div class="chart-type">
+                                         <p class="chart-type-label">Chart Type</p>
+                                           <select name="charttypeDeptt" id="charttypeDeptt" class="form-control">
+                                                  <option value="bar">Bar Chart</option>	     
+                                            </select>
+                                        </div>								
+                                        <div class="inner-container">									
+                                            <div id="consoWiseContainer" data-percent="0" data-whetherrendered ="0" class="donut"></div>									
+                                        </div>									
+                                    </div>
+                                </div>
+                           </div>
+                        </div>
+                        
+                         
+                        <div class="col-lg-12 tab-pane" id="tab2">
+                                <div class="ui-state-default panel-height">
+                                    <div id="deptWiseReviewsDiv" class="tile-container" >
+                                        <h3 class="title">&nbsp;&nbsp;&nbsp;Reviews category</h3>	
+                                        <div class="chart-type">
+                                             <p class="chart-type-label">Chart Type</p>
+                                            <select name="charttypeDeptt" id="charttypeDeptt" class="form-control">
+                                                  <option value="bar">Bar Chart</option>	
+                                                 
+                                            </select>
+                                        </div>								
+                                        <div class="inner-container">									
+                                            <div id="deptWiseContainer" data-percent="0" data-whetherrendered ="0" class="donut"></div>									
+                                        </div>									
+                                    </div>
+                                </div>	
+                        </div>
+                        
+                        <div class="col-lg-12 tab-pane" id="tab3">
+                                <div class="ui-state-default panel-height">
+                                    <div id="deptWiseReviewsDiv2" class="tile-container" >
+                                        <h3 class="title">&nbsp;&nbsp;&nbsp;DPS Reviews</h3>	
+                                        <div class="chart-type">
+                                             <p class="chart-type-label">Chart Type</p>
+                                            <select name="charttypeDeptt" id="charttypeDeptt" class="form-control">
+                                                  <option value="bar">Bar Chart</option>	    
+                                            </select>
+                                        </div>								
+                                        <div class="inner-container">									
+                                            <div id="deptWiseContainer4" data-percent="0" data-whetherrendered ="0" class="donut"></div>									
+                                        </div>									
+                                    </div>
+                                </div>
+                        </div>
+                        
+                        <div class="col-lg-12 tab-pane" id="tab4">
+                                <div class="ui-state-default panel-height">
+                                    <div id="deptWiseReviewsDiv2" class="tile-container" >
+                                        <h3 class="title">&nbsp;&nbsp;&nbsp;DPS Negative Reviews</h3>	
+                                        <div class="chart-type">
+                                            <p class="chart-type-label">Chart Type</p>
+                                            <select name="charttypeDeptt" id="charttypeDeptt" class="form-control">
+                                                  <option value="bar">Bar Chart</option>	     
+                                            </select>
+                                        </div>								
+                                        <div class="inner-container">									
+                                            <div id="deptWiseContainer5" data-percent="0" data-whetherrendered ="0" class="donut"></div>									
+                                        </div>									
+                                    </div>
+                                </div>	
+                        </div>
+                        
+                        <div class="col-lg-12 tab-pane" id="tab5">
+                                <div class="ui-state-default panel-height">
+                                    <div id="deptWiseReviewsDiv2" class="tile-container" >
+                                        <h3 class="title">&nbsp;&nbsp;&nbsp;Amity International Positive Reviews</h3>	
+                                        <div class="chart-type">
+                                             <p class="chart-type-label">Chart Type</p>
+                                             <select name="charttypeDeptt" id="charttypeDeptt" class="form-control">
+                                                  <option value="bar">Bar Chart</option>	  
+                                            </select>
+                                        </div>								
+                                        <div class="inner-container">									
+                                            <div id="deptWiseContainer6" data-percent="0" data-whetherrendered ="0" class="donut"></div>									
+                                        </div>									
+                                    </div>
+                                </div>	
+                        </div>
+                        
+                        <div class="col-lg-12 tab-pane" id="tab6">
+                                <div class="ui-state-default panel-height">
+                                    <div id="deptWiseReviewsDiv2" class="tile-container" >
+                                        <h3 class="title">&nbsp;&nbsp;&nbsp;GD Goenka Positive Reviews</h3>	
+                                        <div class="chart-type">
+                                             <p class="chart-type-label">Chart Type</p>
+                                             <select name="charttypeDeptt" id="charttypeDeptt" class="form-control">
+                                                  <option value="bar">Bar Chart</option>	    
+                                            </select>
+                                        </div>								
+                                        <div class="inner-container">									
+                                            <div id="deptWiseContainer8" data-percent="0" data-whetherrendered ="0" class="donut"></div>									
+                                        </div>									
+                                    </div>
+                                </div>
+                        </div>
+                        
+                        <div class="col-lg-12 tab-pane" id="tab7">
+                                <div class="ui-state-default panel-height">
+                                    <div id="deptWiseReviewsDiv2" class="tile-container" >
+                                        <h3 class="title">&nbsp;&nbsp;&nbsp;GD Goenka Negative Reviews</h3>	
+                                        <div class="chart-type">
+                                            <p class="chart-type-label">Chart Type</p>
+                                            <select name="charttypeDeptt" id="charttypeDeptt" class="form-control">
+                                                  <option value="bar">Bar Chart</option>	     
+                                            </select>
+                                        </div>								
+                                        <div class="inner-container">									
+                                            <div id="deptWiseContainer9" data-percent="0" data-whetherrendered ="0" class="donut"></div>									
+                                        </div>									
+                                    </div>
+                                </div>
+                        </div>
+                        
+                        <div class="col-lg-12 tab-pane" id="tab8">
+                                <div class="ui-state-default panel-height">
+                                    <div id="deptWiseReviewsDiv2" class="tile-container" >
+                                        <h3 class="title">&nbsp;&nbsp;&nbsp;Ryan International Positive Reviews</h3>	
+                                        <div class="chart-type">
+                                             <p class="chart-type-label">Chart Type</p>
+                                            <select name="charttypeDeptt" id="charttypeDeptt" class="form-control">
+                                                  <option value="bar">Bar Chart</option>	
+                                            </select>
+                                        </div>								
+                                        <div class="inner-container">									
+                                            <div id="deptWiseContainer10" data-percent="0" data-whetherrendered ="0" class="donut"></div>									
+                                        </div>									
+                                    </div>
+                                </div>	
+                        </div>
+                        
+                        <div class="col-lg-12 tab-pane" id="tab9">
+                                <div class="ui-state-default panel-height">
+                                    <div id="deptWiseReviewsDiv2" class="tile-container" >
+                                        <h3 class="title">&nbsp;&nbsp;&nbsp;Ryan International Negative Reviews</h3>	
+                                        <div class="chart-type">
+                                             <p class="chart-type-label">Chart Type</p>
+                                            <select name="charttypeDeptt" id="charttypeDeptt" class="form-control">
+                                                  <option value="bar">Bar Chart</option>	    
+                                            </select>
+                                        </div>								
+                                        <div class="inner-container">									
+                                            <div id="deptWiseContainer11" data-percent="0" data-whetherrendered ="0" class="donut"></div>									
+                                        </div>									
+                                    </div>
+                                </div>	
+                        </div>
+                        
+                        <div class="col-lg-12 tab-pane" id="tab10">
+                                <div class="ui-state-default panel-height">
+                                    <div id="deptWiseReviewsDiv2" class="tile-container" >
+                                        <h3 class="title">&nbsp;&nbsp;&nbsp;Don Bosco Positive Reviews</h3>	
+                                        <div class="chart-type">
+                                             <p class="chart-type-label">Chart Type</p>
+                                             <select name="charttypeDeptt" id="charttypeDeptt" class="form-control">
+                                                  <option value="bar">Bar Chart</option>	
+                                                  
+                                            </select>
+                                        </div>								
+                                        <div class="inner-container">									
+                                            <div id="deptWiseContainer12" data-percent="0" data-whetherrendered ="0" class="donut"></div>									
+                                        </div>									
+                                    </div>
+                                </div>	
+                        </div>
+                        
+                        <div class="col-lg-12 tab-pane" id="tab11">
+                                <div class="ui-state-default panel-height">
+                                    <div id="deptWiseReviewsDiv2" class="tile-container" >
+                                        <h3 class="title">&nbsp;&nbsp;&nbsp;Don Bosco Negative Reviews</h3>	
+                                        <div class="chart-type">
+                                             <p class="chart-type-label">Chart Type</p>
+                                            <select name="charttypeDeptt" id="charttypeDeptt" class="form-control">
+                                                  <option value="bar">Bar Chart</option>	     
+                                            </select>
+                                        </div>								
+                                        <div class="inner-container">									
+                                            <div id="deptWiseContainer13" data-percent="0" data-whetherrendered ="0" class="donut"></div>									
+                                        </div>									
+                                    </div>
+                                </div>
+                        </div>
+                        
+                         <div class="col-lg-12 tab-pane" id="tab12">
+                                <div class="ui-state-default panel-height">
+                                    <div id="estimatedReviewsDiv" class="tile-container">
+                                        <h3 class="title">&nbsp;&nbsp;&nbsp;Geolocation</h3>									
+                                        <div class="inner-container">									
+                                            <div id="estimatedContainer" data-percent="0" data-whetherrendered ="0" class="donut"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                        </div> 
+                        
+                        
+                        <div class="col-lg-12 tab-pane" id="tab13">
+                                <div class="ui-state-default panel-height">
+                                    <div id="estimatedReviewsDiv" class="tile-container">
+                                        <h3 class="title">&nbsp;&nbsp;&nbsp;Sample</h3>									
+                                        <div class="inner-container">									
+                                            <div id="chartContainer" data-percent="0" data-whetherrendered ="0" class="donut">
+  </div>
+                                        </div>
+                                    </div>
+                                </div>
+                        </div>
+                        
+                         
+                    </div>	
+                    
+                  
+    
+           			<div class="row" style="display:none;">
+               			 <div class="col-lg-12" style="text-align:center;">
+               			 
+               			 
+
+  <!-- ========================Dashboard tiled widget containers to show system stats======================== -->
+                    			<ul id="dashboard-sortable-containers">
+                    				<li class="alert-sec col-lg-3"  style="display:none;">
+                    				<h2>Alerts</h2>
+                    				<p>Name Node Uptime:&nbsp<span class="critical">Critical</span></p>
+                    				<p>Name Node CPU:&nbsp<span class="good">Good</span></p>
+                    				<p>HDFC Disc Usages:&nbsp<span class="critical">Critical</span></p>
+                    				<p>Live Data Node:&nbsp<span class="good">Good</span></p>
+                    				<p>Name Node Heap:&nbsp<span class="full">Full</span></p>
+                    				<p>Name Node Load:&nbsp<span class="full">Full</span></p>                    				
+                    				</li>
+
+																		
+									<li class="col-lg-3">
+									<div class="ui-state-default">
+									<div id="uptime" class="tile-container">
+									<h3 class="title">NameNode Uptime</h3>
+									<div class="inner-container">
+										<h1 class="green-highlight"><img src="data:image/gif;base64,R0lGODlhEAAQAPMAAP///wAAAAAAAIKCgnJycqioqLy8vM7Ozt7e3pSUlOjo6GhoaAAAAAAAAAAAAAAAACH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAAEKxDISau9OE/Bu//cQBTGgWDhWJ5XSpqoIL6s5a7xjLeyCvOgIEdDLBqPlAgAIfkECQoAAAAsAAAAABAAEAAABCsQyEmrvThPwbv/XJEMxIFg4VieV0qaqCC+rOWu8Yy3sgrzoCBHQywaj5QIACH5BAkKAAAALAAAAAAQABAAAAQrEMhJq704T8G7/9xhFMlAYOFYnldKmqggvqzlrvGMt7IK86AgR0MsGo+UCAAh+QQJCgAAACwAAAAAEAAQAAAEMRDISau9OE/Bu/+cghxGkQyEFY7lmVYraaKqIMpufbc0bLOzFyXGE25AyI5myWw6KREAIfkECQoAAAAsAAAAABAAEAAABDYQyEmrvThPwbv/nKQgh1EkA0GFwFie6SqIpImq29zWMC6xLlssR3vdZEWhDwBqejTQqHRKiQAAIfkECQoAAAAsAAAAABAAEAAABDYQyEmrvThPwbv/HKUgh1EkAyGF01ie6SqIpImqACu5dpzPrRoMpwPwhjLa6yYDOYuaqHRKjQAAIfkECQoAAAAsAAAAABAAEAAABDEQyEmrvThPwbv/nKUgh1EkAxFWY3mmK9WaqCqIJA3fbP7aOFctNpn9QEiPZslsOikRACH5BAkKAAAALAAAAAAQABAAAAQrEMhJq704T8G7/xymIIexEOE1lmdqrSYqiGTsVnA7q7VOszKQ8KYpGo/ICAAh+QQJCgAAACwAAAAAEAAQAAAEJhDISau9OE/Bu/+cthBDEmZjeWKpKYikC6svGq9XC+6e5v/AICUCACH5BAkKAAAALAAAAAAQABAAAAQrEMhJq704T8G7/xy2EENSGOE1lmdqrSYqiGTsVnA7q7VOszKQ8KYpGo/ICAAh+QQJCgAAACwAAAAAEAAQAAAEMRDISau9OE/Bu/+ctRBDUhgHElZjeaYr1ZqoKogkDd9s/to4Vy02mf1ASI9myWw6KREAIfkECQoAAAAsAAAAABAAEAAABDYQyEmrvThPwbv/HLUQQ1IYByKF01ie6SqIpImqACu5dpzPrRoMpwPwhjLa6yYDOYuaqHRKjQAAIfkECQoAAAAsAAAAABAAEAAABDYQyEmrvThPwbv/nLQQQ1IYB0KFwFie6SqIpImq29zWMC6xLlssR3vdZEWhDwBqejTQqHRKiQAAIfkECQoAAAAsAAAAABAAEAAABDEQyEmrvThPwbv/3EIMSWEciBWO5ZlWK2miqiDKbn23NGyzsxclxhNuQMiOZslsOikRADsAAAAAAAAAAAA="/></h1>	
+									</div>
+									<div class="hidden-info">
+											<div><img src="data:image/gif;base64,R0lGODlhEAAQAPMAAP///wAAAAAAAIKCgnJycqioqLy8vM7Ozt7e3pSUlOjo6GhoaAAAAAAAAAAAAAAAACH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAAEKxDISau9OE/Bu//cQBTGgWDhWJ5XSpqoIL6s5a7xjLeyCvOgIEdDLBqPlAgAIfkECQoAAAAsAAAAABAAEAAABCsQyEmrvThPwbv/XJEMxIFg4VieV0qaqCC+rOWu8Yy3sgrzoCBHQywaj5QIACH5BAkKAAAALAAAAAAQABAAAAQrEMhJq704T8G7/9xhFMlAYOFYnldKmqggvqzlrvGMt7IK86AgR0MsGo+UCAAh+QQJCgAAACwAAAAAEAAQAAAEMRDISau9OE/Bu/+cghxGkQyEFY7lmVYraaKqIMpufbc0bLOzFyXGE25AyI5myWw6KREAIfkECQoAAAAsAAAAABAAEAAABDYQyEmrvThPwbv/nKQgh1EkA0GFwFie6SqIpImq29zWMC6xLlssR3vdZEWhDwBqejTQqHRKiQAAIfkECQoAAAAsAAAAABAAEAAABDYQyEmrvThPwbv/HKUgh1EkAyGF01ie6SqIpImqACu5dpzPrRoMpwPwhjLa6yYDOYuaqHRKjQAAIfkECQoAAAAsAAAAABAAEAAABDEQyEmrvThPwbv/nKUgh1EkAxFWY3mmK9WaqCqIJA3fbP7aOFctNpn9QEiPZslsOikRACH5BAkKAAAALAAAAAAQABAAAAQrEMhJq704T8G7/xymIIexEOE1lmdqrSYqiGTsVnA7q7VOszKQ8KYpGo/ICAAh+QQJCgAAACwAAAAAEAAQAAAEJhDISau9OE/Bu/+cthBDEmZjeWKpKYikC6svGq9XC+6e5v/AICUCACH5BAkKAAAALAAAAAAQABAAAAQrEMhJq704T8G7/xy2EENSGOE1lmdqrSYqiGTsVnA7q7VOszKQ8KYpGo/ICAAh+QQJCgAAACwAAAAAEAAQAAAEMRDISau9OE/Bu/+ctRBDUhgHElZjeaYr1ZqoKogkDd9s/to4Vy02mf1ASI9myWw6KREAIfkECQoAAAAsAAAAABAAEAAABDYQyEmrvThPwbv/HLUQQ1IYByKF01ie6SqIpImqACu5dpzPrRoMpwPwhjLa6yYDOYuaqHRKjQAAIfkECQoAAAAsAAAAABAAEAAABDYQyEmrvThPwbv/nLQQQ1IYB0KFwFie6SqIpImq29zWMC6xLlssR3vdZEWhDwBqejTQqHRKiQAAIfkECQoAAAAsAAAAABAAEAAABDEQyEmrvThPwbv/3EIMSWEciBWO5ZlWK2miqiDKbn23NGyzsxclxhNuQMiOZslsOikRADsAAAAAAAAAAAA="/></div>
+									</div>
+									</div>
+									</div>
+									</li>
+									
+									
+									
+									
+									
+									
+									
+									
+									<li class="col-lg-3">
+									<div class="ui-state-default">
+									<div id="namenodecpustat" class="tile-container" onclick="openDetailNamenodeCpuStat();">
+									<h3 class="title">NameNode CPU</h3>
+									<div class="inner-container">
+									<div id="namenode_cpu_usage">
+									<img src="data:image/gif;base64,R0lGODlhEAAQAPMAAP///wAAAAAAAIKCgnJycqioqLy8vM7Ozt7e3pSUlOjo6GhoaAAAAAAAAAAAAAAAACH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAAEKxDISau9OE/Bu//cQBTGgWDhWJ5XSpqoIL6s5a7xjLeyCvOgIEdDLBqPlAgAIfkECQoAAAAsAAAAABAAEAAABCsQyEmrvThPwbv/XJEMxIFg4VieV0qaqCC+rOWu8Yy3sgrzoCBHQywaj5QIACH5BAkKAAAALAAAAAAQABAAAAQrEMhJq704T8G7/9xhFMlAYOFYnldKmqggvqzlrvGMt7IK86AgR0MsGo+UCAAh+QQJCgAAACwAAAAAEAAQAAAEMRDISau9OE/Bu/+cghxGkQyEFY7lmVYraaKqIMpufbc0bLOzFyXGE25AyI5myWw6KREAIfkECQoAAAAsAAAAABAAEAAABDYQyEmrvThPwbv/nKQgh1EkA0GFwFie6SqIpImq29zWMC6xLlssR3vdZEWhDwBqejTQqHRKiQAAIfkECQoAAAAsAAAAABAAEAAABDYQyEmrvThPwbv/HKUgh1EkAyGF01ie6SqIpImqACu5dpzPrRoMpwPwhjLa6yYDOYuaqHRKjQAAIfkECQoAAAAsAAAAABAAEAAABDEQyEmrvThPwbv/nKUgh1EkAxFWY3mmK9WaqCqIJA3fbP7aOFctNpn9QEiPZslsOikRACH5BAkKAAAALAAAAAAQABAAAAQrEMhJq704T8G7/xymIIexEOE1lmdqrSYqiGTsVnA7q7VOszKQ8KYpGo/ICAAh+QQJCgAAACwAAAAAEAAQAAAEJhDISau9OE/Bu/+cthBDEmZjeWKpKYikC6svGq9XC+6e5v/AICUCACH5BAkKAAAALAAAAAAQABAAAAQrEMhJq704T8G7/xy2EENSGOE1lmdqrSYqiGTsVnA7q7VOszKQ8KYpGo/ICAAh+QQJCgAAACwAAAAAEAAQAAAEMRDISau9OE/Bu/+ctRBDUhgHElZjeaYr1ZqoKogkDd9s/to4Vy02mf1ASI9myWw6KREAIfkECQoAAAAsAAAAABAAEAAABDYQyEmrvThPwbv/HLUQQ1IYByKF01ie6SqIpImqACu5dpzPrRoMpwPwhjLa6yYDOYuaqHRKjQAAIfkECQoAAAAsAAAAABAAEAAABDYQyEmrvThPwbv/nLQQQ1IYB0KFwFie6SqIpImq29zWMC6xLlssR3vdZEWhDwBqejTQqHRKiQAAIfkECQoAAAAsAAAAABAAEAAABDEQyEmrvThPwbv/3EIMSWEciBWO5ZlWK2miqiDKbn23NGyzsxclxhNuQMiOZslsOikRADsAAAAAAAAAAAA=" style="margin-top:26px;" />
+									</div>
+									<div class="errinfo">Unavailable.</div>
+									</div>
+									<div class="hidden-info">
+										<div>
+									        <img src="data:image/gif;base64,R0lGODlhEAAQAPMAAP///wAAAAAAAIKCgnJycqioqLy8vM7Ozt7e3pSUlOjo6GhoaAAAAAAAAAAAAAAAACH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAAEKxDISau9OE/Bu//cQBTGgWDhWJ5XSpqoIL6s5a7xjLeyCvOgIEdDLBqPlAgAIfkECQoAAAAsAAAAABAAEAAABCsQyEmrvThPwbv/XJEMxIFg4VieV0qaqCC+rOWu8Yy3sgrzoCBHQywaj5QIACH5BAkKAAAALAAAAAAQABAAAAQrEMhJq704T8G7/9xhFMlAYOFYnldKmqggvqzlrvGMt7IK86AgR0MsGo+UCAAh+QQJCgAAACwAAAAAEAAQAAAEMRDISau9OE/Bu/+cghxGkQyEFY7lmVYraaKqIMpufbc0bLOzFyXGE25AyI5myWw6KREAIfkECQoAAAAsAAAAABAAEAAABDYQyEmrvThPwbv/nKQgh1EkA0GFwFie6SqIpImq29zWMC6xLlssR3vdZEWhDwBqejTQqHRKiQAAIfkECQoAAAAsAAAAABAAEAAABDYQyEmrvThPwbv/HKUgh1EkAyGF01ie6SqIpImqACu5dpzPrRoMpwPwhjLa6yYDOYuaqHRKjQAAIfkECQoAAAAsAAAAABAAEAAABDEQyEmrvThPwbv/nKUgh1EkAxFWY3mmK9WaqCqIJA3fbP7aOFctNpn9QEiPZslsOikRACH5BAkKAAAALAAAAAAQABAAAAQrEMhJq704T8G7/xymIIexEOE1lmdqrSYqiGTsVnA7q7VOszKQ8KYpGo/ICAAh+QQJCgAAACwAAAAAEAAQAAAEJhDISau9OE/Bu/+cthBDEmZjeWKpKYikC6svGq9XC+6e5v/AICUCACH5BAkKAAAALAAAAAAQABAAAAQrEMhJq704T8G7/xy2EENSGOE1lmdqrSYqiGTsVnA7q7VOszKQ8KYpGo/ICAAh+QQJCgAAACwAAAAAEAAQAAAEMRDISau9OE/Bu/+ctRBDUhgHElZjeaYr1ZqoKogkDd9s/to4Vy02mf1ASI9myWw6KREAIfkECQoAAAAsAAAAABAAEAAABDYQyEmrvThPwbv/HLUQQ1IYByKF01ie6SqIpImqACu5dpzPrRoMpwPwhjLa6yYDOYuaqHRKjQAAIfkECQoAAAAsAAAAABAAEAAABDYQyEmrvThPwbv/nLQQQ1IYB0KFwFie6SqIpImq29zWMC6xLlssR3vdZEWhDwBqejTQqHRKiQAAIfkECQoAAAAsAAAAABAAEAAABDEQyEmrvThPwbv/3EIMSWEciBWO5ZlWK2miqiDKbn23NGyzsxclxhNuQMiOZslsOikRADsAAAAAAAAAAAA=" />
+										</div>
+									</div>
+									</div>
+									</div>
+									</li>
+									
+									<li class="col-lg-3">
+									<div class="ui-state-default">
+									<div id="hdfsstat" class="tile-container">
+									<h3 class="title">HDFS Disk Usage</h3>
+									<div class="inner-container">
+									<div id="hdfs_disk_usage" data-percent="0" data-whetherrendered ="0" class="donut"></div>
+									<div class="errinfo">
+										<img src="data:image/gif;base64,R0lGODlhEAAQAPMAAP///wAAAAAAAIKCgnJycqioqLy8vM7Ozt7e3pSUlOjo6GhoaAAAAAAAAAAAAAAAACH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAAEKxDISau9OE/Bu//cQBTGgWDhWJ5XSpqoIL6s5a7xjLeyCvOgIEdDLBqPlAgAIfkECQoAAAAsAAAAABAAEAAABCsQyEmrvThPwbv/XJEMxIFg4VieV0qaqCC+rOWu8Yy3sgrzoCBHQywaj5QIACH5BAkKAAAALAAAAAAQABAAAAQrEMhJq704T8G7/9xhFMlAYOFYnldKmqggvqzlrvGMt7IK86AgR0MsGo+UCAAh+QQJCgAAACwAAAAAEAAQAAAEMRDISau9OE/Bu/+cghxGkQyEFY7lmVYraaKqIMpufbc0bLOzFyXGE25AyI5myWw6KREAIfkECQoAAAAsAAAAABAAEAAABDYQyEmrvThPwbv/nKQgh1EkA0GFwFie6SqIpImq29zWMC6xLlssR3vdZEWhDwBqejTQqHRKiQAAIfkECQoAAAAsAAAAABAAEAAABDYQyEmrvThPwbv/HKUgh1EkAyGF01ie6SqIpImqACu5dpzPrRoMpwPwhjLa6yYDOYuaqHRKjQAAIfkECQoAAAAsAAAAABAAEAAABDEQyEmrvThPwbv/nKUgh1EkAxFWY3mmK9WaqCqIJA3fbP7aOFctNpn9QEiPZslsOikRACH5BAkKAAAALAAAAAAQABAAAAQrEMhJq704T8G7/xymIIexEOE1lmdqrSYqiGTsVnA7q7VOszKQ8KYpGo/ICAAh+QQJCgAAACwAAAAAEAAQAAAEJhDISau9OE/Bu/+cthBDEmZjeWKpKYikC6svGq9XC+6e5v/AICUCACH5BAkKAAAALAAAAAAQABAAAAQrEMhJq704T8G7/xy2EENSGOE1lmdqrSYqiGTsVnA7q7VOszKQ8KYpGo/ICAAh+QQJCgAAACwAAAAAEAAQAAAEMRDISau9OE/Bu/+ctRBDUhgHElZjeaYr1ZqoKogkDd9s/to4Vy02mf1ASI9myWw6KREAIfkECQoAAAAsAAAAABAAEAAABDYQyEmrvThPwbv/HLUQQ1IYByKF01ie6SqIpImqACu5dpzPrRoMpwPwhjLa6yYDOYuaqHRKjQAAIfkECQoAAAAsAAAAABAAEAAABDYQyEmrvThPwbv/nLQQQ1IYB0KFwFie6SqIpImq29zWMC6xLlssR3vdZEWhDwBqejTQqHRKiQAAIfkECQoAAAAsAAAAABAAEAAABDEQyEmrvThPwbv/3EIMSWEciBWO5ZlWK2miqiDKbn23NGyzsxclxhNuQMiOZslsOikRADsAAAAAAAAAAAA=" />
+									</div>
+									</div>
+									<div class="hidden-info">
+										<div>
+									        <img src="data:image/gif;base64,R0lGODlhEAAQAPMAAP///wAAAAAAAIKCgnJycqioqLy8vM7Ozt7e3pSUlOjo6GhoaAAAAAAAAAAAAAAAACH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAAEKxDISau9OE/Bu//cQBTGgWDhWJ5XSpqoIL6s5a7xjLeyCvOgIEdDLBqPlAgAIfkECQoAAAAsAAAAABAAEAAABCsQyEmrvThPwbv/XJEMxIFg4VieV0qaqCC+rOWu8Yy3sgrzoCBHQywaj5QIACH5BAkKAAAALAAAAAAQABAAAAQrEMhJq704T8G7/9xhFMlAYOFYnldKmqggvqzlrvGMt7IK86AgR0MsGo+UCAAh+QQJCgAAACwAAAAAEAAQAAAEMRDISau9OE/Bu/+cghxGkQyEFY7lmVYraaKqIMpufbc0bLOzFyXGE25AyI5myWw6KREAIfkECQoAAAAsAAAAABAAEAAABDYQyEmrvThPwbv/nKQgh1EkA0GFwFie6SqIpImq29zWMC6xLlssR3vdZEWhDwBqejTQqHRKiQAAIfkECQoAAAAsAAAAABAAEAAABDYQyEmrvThPwbv/HKUgh1EkAyGF01ie6SqIpImqACu5dpzPrRoMpwPwhjLa6yYDOYuaqHRKjQAAIfkECQoAAAAsAAAAABAAEAAABDEQyEmrvThPwbv/nKUgh1EkAxFWY3mmK9WaqCqIJA3fbP7aOFctNpn9QEiPZslsOikRACH5BAkKAAAALAAAAAAQABAAAAQrEMhJq704T8G7/xymIIexEOE1lmdqrSYqiGTsVnA7q7VOszKQ8KYpGo/ICAAh+QQJCgAAACwAAAAAEAAQAAAEJhDISau9OE/Bu/+cthBDEmZjeWKpKYikC6svGq9XC+6e5v/AICUCACH5BAkKAAAALAAAAAAQABAAAAQrEMhJq704T8G7/xy2EENSGOE1lmdqrSYqiGTsVnA7q7VOszKQ8KYpGo/ICAAh+QQJCgAAACwAAAAAEAAQAAAEMRDISau9OE/Bu/+ctRBDUhgHElZjeaYr1ZqoKogkDd9s/to4Vy02mf1ASI9myWw6KREAIfkECQoAAAAsAAAAABAAEAAABDYQyEmrvThPwbv/HLUQQ1IYByKF01ie6SqIpImqACu5dpzPrRoMpwPwhjLa6yYDOYuaqHRKjQAAIfkECQoAAAAsAAAAABAAEAAABDYQyEmrvThPwbv/nLQQQ1IYB0KFwFie6SqIpImq29zWMC6xLlssR3vdZEWhDwBqejTQqHRKiQAAIfkECQoAAAAsAAAAABAAEAAABDEQyEmrvThPwbv/3EIMSWEciBWO5ZlWK2miqiDKbn23NGyzsxclxhNuQMiOZslsOikRADsAAAAAAAAAAAA=" />
+										</div>
+									</div>
+									</div>
+									</div>
+									</li>
+									<li class="col-lg-3">
+									<div class="ui-state-default">
+									<div id="nodehealth" class="tile-container" >
+									<h3 class="title">Live DataNodes</h3>
+									<div class="inner-container">
+									<h1 style="font-size:60px;"><img src="data:image/gif;base64,R0lGODlhEAAQAPMAAP///wAAAAAAAIKCgnJycqioqLy8vM7Ozt7e3pSUlOjo6GhoaAAAAAAAAAAAAAAAACH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAAEKxDISau9OE/Bu//cQBTGgWDhWJ5XSpqoIL6s5a7xjLeyCvOgIEdDLBqPlAgAIfkECQoAAAAsAAAAABAAEAAABCsQyEmrvThPwbv/XJEMxIFg4VieV0qaqCC+rOWu8Yy3sgrzoCBHQywaj5QIACH5BAkKAAAALAAAAAAQABAAAAQrEMhJq704T8G7/9xhFMlAYOFYnldKmqggvqzlrvGMt7IK86AgR0MsGo+UCAAh+QQJCgAAACwAAAAAEAAQAAAEMRDISau9OE/Bu/+cghxGkQyEFY7lmVYraaKqIMpufbc0bLOzFyXGE25AyI5myWw6KREAIfkECQoAAAAsAAAAABAAEAAABDYQyEmrvThPwbv/nKQgh1EkA0GFwFie6SqIpImq29zWMC6xLlssR3vdZEWhDwBqejTQqHRKiQAAIfkECQoAAAAsAAAAABAAEAAABDYQyEmrvThPwbv/HKUgh1EkAyGF01ie6SqIpImqACu5dpzPrRoMpwPwhjLa6yYDOYuaqHRKjQAAIfkECQoAAAAsAAAAABAAEAAABDEQyEmrvThPwbv/nKUgh1EkAxFWY3mmK9WaqCqIJA3fbP7aOFctNpn9QEiPZslsOikRACH5BAkKAAAALAAAAAAQABAAAAQrEMhJq704T8G7/xymIIexEOE1lmdqrSYqiGTsVnA7q7VOszKQ8KYpGo/ICAAh+QQJCgAAACwAAAAAEAAQAAAEJhDISau9OE/Bu/+cthBDEmZjeWKpKYikC6svGq9XC+6e5v/AICUCACH5BAkKAAAALAAAAAAQABAAAAQrEMhJq704T8G7/xy2EENSGOE1lmdqrSYqiGTsVnA7q7VOszKQ8KYpGo/ICAAh+QQJCgAAACwAAAAAEAAQAAAEMRDISau9OE/Bu/+ctRBDUhgHElZjeaYr1ZqoKogkDd9s/to4Vy02mf1ASI9myWw6KREAIfkECQoAAAAsAAAAABAAEAAABDYQyEmrvThPwbv/HLUQQ1IYByKF01ie6SqIpImqACu5dpzPrRoMpwPwhjLa6yYDOYuaqHRKjQAAIfkECQoAAAAsAAAAABAAEAAABDYQyEmrvThPwbv/nLQQQ1IYB0KFwFie6SqIpImq29zWMC6xLlssR3vdZEWhDwBqejTQqHRKiQAAIfkECQoAAAAsAAAAABAAEAAABDEQyEmrvThPwbv/3EIMSWEciBWO5ZlWK2miqiDKbn23NGyzsxclxhNuQMiOZslsOikRADsAAAAAAAAAAAA=" /></h1>
+									</div>
+									<div class="hidden-info">
+									        <div>
+											&nbsp;
+											</div>
+									</div>
+									</div>
+									</div>
+									</li>						
+									<li class="col-lg-3">
+									<div class="ui-state-default">
+									<div id="namenodeheapstat" class="tile-container">
+									<h3 class="title">NameNode Heap</h3>
+									<div class="inner-container">
+									<div id="namenode_heap_usage" data-percent="0" data-whetherrendered ="0" class="donut"></div>
+									<div class="errinfo">Unavailable</div>
+									</div>
+									<div class="hidden-info">
+										<div>
+									        <img src="data:image/gif;base64,R0lGODlhEAAQAPMAAP///wAAAAAAAIKCgnJycqioqLy8vM7Ozt7e3pSUlOjo6GhoaAAAAAAAAAAAAAAAACH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAAEKxDISau9OE/Bu//cQBTGgWDhWJ5XSpqoIL6s5a7xjLeyCvOgIEdDLBqPlAgAIfkECQoAAAAsAAAAABAAEAAABCsQyEmrvThPwbv/XJEMxIFg4VieV0qaqCC+rOWu8Yy3sgrzoCBHQywaj5QIACH5BAkKAAAALAAAAAAQABAAAAQrEMhJq704T8G7/9xhFMlAYOFYnldKmqggvqzlrvGMt7IK86AgR0MsGo+UCAAh+QQJCgAAACwAAAAAEAAQAAAEMRDISau9OE/Bu/+cghxGkQyEFY7lmVYraaKqIMpufbc0bLOzFyXGE25AyI5myWw6KREAIfkECQoAAAAsAAAAABAAEAAABDYQyEmrvThPwbv/nKQgh1EkA0GFwFie6SqIpImq29zWMC6xLlssR3vdZEWhDwBqejTQqHRKiQAAIfkECQoAAAAsAAAAABAAEAAABDYQyEmrvThPwbv/HKUgh1EkAyGF01ie6SqIpImqACu5dpzPrRoMpwPwhjLa6yYDOYuaqHRKjQAAIfkECQoAAAAsAAAAABAAEAAABDEQyEmrvThPwbv/nKUgh1EkAxFWY3mmK9WaqCqIJA3fbP7aOFctNpn9QEiPZslsOikRACH5BAkKAAAALAAAAAAQABAAAAQrEMhJq704T8G7/xymIIexEOE1lmdqrSYqiGTsVnA7q7VOszKQ8KYpGo/ICAAh+QQJCgAAACwAAAAAEAAQAAAEJhDISau9OE/Bu/+cthBDEmZjeWKpKYikC6svGq9XC+6e5v/AICUCACH5BAkKAAAALAAAAAAQABAAAAQrEMhJq704T8G7/xy2EENSGOE1lmdqrSYqiGTsVnA7q7VOszKQ8KYpGo/ICAAh+QQJCgAAACwAAAAAEAAQAAAEMRDISau9OE/Bu/+ctRBDUhgHElZjeaYr1ZqoKogkDd9s/to4Vy02mf1ASI9myWw6KREAIfkECQoAAAAsAAAAABAAEAAABDYQyEmrvThPwbv/HLUQQ1IYByKF01ie6SqIpImqACu5dpzPrRoMpwPwhjLa6yYDOYuaqHRKjQAAIfkECQoAAAAsAAAAABAAEAAABDYQyEmrvThPwbv/nLQQQ1IYB0KFwFie6SqIpImq29zWMC6xLlssR3vdZEWhDwBqejTQqHRKiQAAIfkECQoAAAAsAAAAABAAEAAABDEQyEmrvThPwbv/3EIMSWEciBWO5ZlWK2miqiDKbn23NGyzsxclxhNuQMiOZslsOikRADsAAAAAAAAAAAA=" />
+										</div>
+									</div>
+									</div>
+									</div>
+									</li>
+									
+									<li class="col-lg-3">
+									<div class="ui-state-default">
+									<div id="namenodememorystat" class="tile-container">
+									<h3 class="title" style="white-space:nowrap;">Namenode Host Memory</h3>
+									<div class="inner-container">
+									<div id="namenode_memo_usage" data-percent="0" data-whetherrendered ="0" class="donut"></div>
+									<div class="errinfo">Unavailable.</div>
+									</div>
+									<div class="hidden-info">
+										<div>
+									        <img src="data:image/gif;base64,R0lGODlhEAAQAPMAAP///wAAAAAAAIKCgnJycqioqLy8vM7Ozt7e3pSUlOjo6GhoaAAAAAAAAAAAAAAAACH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAAEKxDISau9OE/Bu//cQBTGgWDhWJ5XSpqoIL6s5a7xjLeyCvOgIEdDLBqPlAgAIfkECQoAAAAsAAAAABAAEAAABCsQyEmrvThPwbv/XJEMxIFg4VieV0qaqCC+rOWu8Yy3sgrzoCBHQywaj5QIACH5BAkKAAAALAAAAAAQABAAAAQrEMhJq704T8G7/9xhFMlAYOFYnldKmqggvqzlrvGMt7IK86AgR0MsGo+UCAAh+QQJCgAAACwAAAAAEAAQAAAEMRDISau9OE/Bu/+cghxGkQyEFY7lmVYraaKqIMpufbc0bLOzFyXGE25AyI5myWw6KREAIfkECQoAAAAsAAAAABAAEAAABDYQyEmrvThPwbv/nKQgh1EkA0GFwFie6SqIpImq29zWMC6xLlssR3vdZEWhDwBqejTQqHRKiQAAIfkECQoAAAAsAAAAABAAEAAABDYQyEmrvThPwbv/HKUgh1EkAyGF01ie6SqIpImqACu5dpzPrRoMpwPwhjLa6yYDOYuaqHRKjQAAIfkECQoAAAAsAAAAABAAEAAABDEQyEmrvThPwbv/nKUgh1EkAxFWY3mmK9WaqCqIJA3fbP7aOFctNpn9QEiPZslsOikRACH5BAkKAAAALAAAAAAQABAAAAQrEMhJq704T8G7/xymIIexEOE1lmdqrSYqiGTsVnA7q7VOszKQ8KYpGo/ICAAh+QQJCgAAACwAAAAAEAAQAAAEJhDISau9OE/Bu/+cthBDEmZjeWKpKYikC6svGq9XC+6e5v/AICUCACH5BAkKAAAALAAAAAAQABAAAAQrEMhJq704T8G7/xy2EENSGOE1lmdqrSYqiGTsVnA7q7VOszKQ8KYpGo/ICAAh+QQJCgAAACwAAAAAEAAQAAAEMRDISau9OE/Bu/+ctRBDUhgHElZjeaYr1ZqoKogkDd9s/to4Vy02mf1ASI9myWw6KREAIfkECQoAAAAsAAAAABAAEAAABDYQyEmrvThPwbv/HLUQQ1IYByKF01ie6SqIpImqACu5dpzPrRoMpwPwhjLa6yYDOYuaqHRKjQAAIfkECQoAAAAsAAAAABAAEAAABDYQyEmrvThPwbv/nLQQQ1IYB0KFwFie6SqIpImq29zWMC6xLlssR3vdZEWhDwBqejTQqHRKiQAAIfkECQoAAAAsAAAAABAAEAAABDEQyEmrvThPwbv/3EIMSWEciBWO5ZlWK2miqiDKbn23NGyzsxclxhNuQMiOZslsOikRADsAAAAAAAAAAAA=" />
+										</div>
+									</div>
+									</div>
+									</div>
+									</li>
+									
+									
+									<li class="col-lg-3">
+									<div class="ui-state-default">
+									<div id="resourceheapstat" class="tile-container">
+									<h3 class="title">ResourceManager Heap</h3>
+									<div class="inner-container">
+									<div id="resourcemanager_heap_usage" data-percent="0" data-whetherrendered ="0" class="donut"></div>
+									<div class="errinfo">Unavailable.</div>
+									</div>
+									<div class="hidden-info">
+										<div>
+									        <img src="data:image/gif;base64,R0lGODlhEAAQAPMAAP///wAAAAAAAIKCgnJycqioqLy8vM7Ozt7e3pSUlOjo6GhoaAAAAAAAAAAAAAAAACH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAAEKxDISau9OE/Bu//cQBTGgWDhWJ5XSpqoIL6s5a7xjLeyCvOgIEdDLBqPlAgAIfkECQoAAAAsAAAAABAAEAAABCsQyEmrvThPwbv/XJEMxIFg4VieV0qaqCC+rOWu8Yy3sgrzoCBHQywaj5QIACH5BAkKAAAALAAAAAAQABAAAAQrEMhJq704T8G7/9xhFMlAYOFYnldKmqggvqzlrvGMt7IK86AgR0MsGo+UCAAh+QQJCgAAACwAAAAAEAAQAAAEMRDISau9OE/Bu/+cghxGkQyEFY7lmVYraaKqIMpufbc0bLOzFyXGE25AyI5myWw6KREAIfkECQoAAAAsAAAAABAAEAAABDYQyEmrvThPwbv/nKQgh1EkA0GFwFie6SqIpImq29zWMC6xLlssR3vdZEWhDwBqejTQqHRKiQAAIfkECQoAAAAsAAAAABAAEAAABDYQyEmrvThPwbv/HKUgh1EkAyGF01ie6SqIpImqACu5dpzPrRoMpwPwhjLa6yYDOYuaqHRKjQAAIfkECQoAAAAsAAAAABAAEAAABDEQyEmrvThPwbv/nKUgh1EkAxFWY3mmK9WaqCqIJA3fbP7aOFctNpn9QEiPZslsOikRACH5BAkKAAAALAAAAAAQABAAAAQrEMhJq704T8G7/xymIIexEOE1lmdqrSYqiGTsVnA7q7VOszKQ8KYpGo/ICAAh+QQJCgAAACwAAAAAEAAQAAAEJhDISau9OE/Bu/+cthBDEmZjeWKpKYikC6svGq9XC+6e5v/AICUCACH5BAkKAAAALAAAAAAQABAAAAQrEMhJq704T8G7/xy2EENSGOE1lmdqrSYqiGTsVnA7q7VOszKQ8KYpGo/ICAAh+QQJCgAAACwAAAAAEAAQAAAEMRDISau9OE/Bu/+ctRBDUhgHElZjeaYr1ZqoKogkDd9s/to4Vy02mf1ASI9myWw6KREAIfkECQoAAAAsAAAAABAAEAAABDYQyEmrvThPwbv/HLUQQ1IYByKF01ie6SqIpImqACu5dpzPrRoMpwPwhjLa6yYDOYuaqHRKjQAAIfkECQoAAAAsAAAAABAAEAAABDYQyEmrvThPwbv/nLQQQ1IYB0KFwFie6SqIpImq29zWMC6xLlssR3vdZEWhDwBqejTQqHRKiQAAIfkECQoAAAAsAAAAABAAEAAABDEQyEmrvThPwbv/3EIMSWEciBWO5ZlWK2miqiDKbn23NGyzsxclxhNuQMiOZslsOikRADsAAAAAAAAAAAA=" />
+										</div>
+									</div>
+									</div>
+									</div>
+									</li>
+									
+									<li class="col-lg-3">
+									<div class="ui-state-default">
+									<div id="namenodeloadstat" class="tile-container">
+									<h3 class="title" style="white-space:nowrap;">NameNode Host Load </h3>
+									<div class="inner-container">
+									<div id="namenode_load_usage">
+									<img src="data:image/gif;base64,R0lGODlhEAAQAPMAAP///wAAAAAAAIKCgnJycqioqLy8vM7Ozt7e3pSUlOjo6GhoaAAAAAAAAAAAAAAAACH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAAEKxDISau9OE/Bu//cQBTGgWDhWJ5XSpqoIL6s5a7xjLeyCvOgIEdDLBqPlAgAIfkECQoAAAAsAAAAABAAEAAABCsQyEmrvThPwbv/XJEMxIFg4VieV0qaqCC+rOWu8Yy3sgrzoCBHQywaj5QIACH5BAkKAAAALAAAAAAQABAAAAQrEMhJq704T8G7/9xhFMlAYOFYnldKmqggvqzlrvGMt7IK86AgR0MsGo+UCAAh+QQJCgAAACwAAAAAEAAQAAAEMRDISau9OE/Bu/+cghxGkQyEFY7lmVYraaKqIMpufbc0bLOzFyXGE25AyI5myWw6KREAIfkECQoAAAAsAAAAABAAEAAABDYQyEmrvThPwbv/nKQgh1EkA0GFwFie6SqIpImq29zWMC6xLlssR3vdZEWhDwBqejTQqHRKiQAAIfkECQoAAAAsAAAAABAAEAAABDYQyEmrvThPwbv/HKUgh1EkAyGF01ie6SqIpImqACu5dpzPrRoMpwPwhjLa6yYDOYuaqHRKjQAAIfkECQoAAAAsAAAAABAAEAAABDEQyEmrvThPwbv/nKUgh1EkAxFWY3mmK9WaqCqIJA3fbP7aOFctNpn9QEiPZslsOikRACH5BAkKAAAALAAAAAAQABAAAAQrEMhJq704T8G7/xymIIexEOE1lmdqrSYqiGTsVnA7q7VOszKQ8KYpGo/ICAAh+QQJCgAAACwAAAAAEAAQAAAEJhDISau9OE/Bu/+cthBDEmZjeWKpKYikC6svGq9XC+6e5v/AICUCACH5BAkKAAAALAAAAAAQABAAAAQrEMhJq704T8G7/xy2EENSGOE1lmdqrSYqiGTsVnA7q7VOszKQ8KYpGo/ICAAh+QQJCgAAACwAAAAAEAAQAAAEMRDISau9OE/Bu/+ctRBDUhgHElZjeaYr1ZqoKogkDd9s/to4Vy02mf1ASI9myWw6KREAIfkECQoAAAAsAAAAABAAEAAABDYQyEmrvThPwbv/HLUQQ1IYByKF01ie6SqIpImqACu5dpzPrRoMpwPwhjLa6yYDOYuaqHRKjQAAIfkECQoAAAAsAAAAABAAEAAABDYQyEmrvThPwbv/nLQQQ1IYB0KFwFie6SqIpImq29zWMC6xLlssR3vdZEWhDwBqejTQqHRKiQAAIfkECQoAAAAsAAAAABAAEAAABDEQyEmrvThPwbv/3EIMSWEciBWO5ZlWK2miqiDKbn23NGyzsxclxhNuQMiOZslsOikRADsAAAAAAAAAAAA=" style="margin-top:32px;"/>
+									</div>
+									<div class="errinfo">Unavailable.</div>
+									</div>
+									<div class="hidden-info" >
+										<div>
+									        <img src="data:image/gif;base64,R0lGODlhEAAQAPMAAP///wAAAAAAAIKCgnJycqioqLy8vM7Ozt7e3pSUlOjo6GhoaAAAAAAAAAAAAAAAACH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAAEKxDISau9OE/Bu//cQBTGgWDhWJ5XSpqoIL6s5a7xjLeyCvOgIEdDLBqPlAgAIfkECQoAAAAsAAAAABAAEAAABCsQyEmrvThPwbv/XJEMxIFg4VieV0qaqCC+rOWu8Yy3sgrzoCBHQywaj5QIACH5BAkKAAAALAAAAAAQABAAAAQrEMhJq704T8G7/9xhFMlAYOFYnldKmqggvqzlrvGMt7IK86AgR0MsGo+UCAAh+QQJCgAAACwAAAAAEAAQAAAEMRDISau9OE/Bu/+cghxGkQyEFY7lmVYraaKqIMpufbc0bLOzFyXGE25AyI5myWw6KREAIfkECQoAAAAsAAAAABAAEAAABDYQyEmrvThPwbv/nKQgh1EkA0GFwFie6SqIpImq29zWMC6xLlssR3vdZEWhDwBqejTQqHRKiQAAIfkECQoAAAAsAAAAABAAEAAABDYQyEmrvThPwbv/HKUgh1EkAyGF01ie6SqIpImqACu5dpzPrRoMpwPwhjLa6yYDOYuaqHRKjQAAIfkECQoAAAAsAAAAABAAEAAABDEQyEmrvThPwbv/nKUgh1EkAxFWY3mmK9WaqCqIJA3fbP7aOFctNpn9QEiPZslsOikRACH5BAkKAAAALAAAAAAQABAAAAQrEMhJq704T8G7/xymIIexEOE1lmdqrSYqiGTsVnA7q7VOszKQ8KYpGo/ICAAh+QQJCgAAACwAAAAAEAAQAAAEJhDISau9OE/Bu/+cthBDEmZjeWKpKYikC6svGq9XC+6e5v/AICUCACH5BAkKAAAALAAAAAAQABAAAAQrEMhJq704T8G7/xy2EENSGOE1lmdqrSYqiGTsVnA7q7VOszKQ8KYpGo/ICAAh+QQJCgAAACwAAAAAEAAQAAAEMRDISau9OE/Bu/+ctRBDUhgHElZjeaYr1ZqoKogkDd9s/to4Vy02mf1ASI9myWw6KREAIfkECQoAAAAsAAAAABAAEAAABDYQyEmrvThPwbv/HLUQQ1IYByKF01ie6SqIpImqACu5dpzPrRoMpwPwhjLa6yYDOYuaqHRKjQAAIfkECQoAAAAsAAAAABAAEAAABDYQyEmrvThPwbv/nLQQQ1IYB0KFwFie6SqIpImq29zWMC6xLlssR3vdZEWhDwBqejTQqHRKiQAAIfkECQoAAAAsAAAAABAAEAAABDEQyEmrvThPwbv/3EIMSWEciBWO5ZlWK2miqiDKbn23NGyzsxclxhNuQMiOZslsOikRADsAAAAAAAAAAAA=" />
+										</div>
+									</div>
+									</div>
+									</div>
+									</li>
+
+<li class="col-lg-3">
+									<div class="ui-state-default" style="height: 350px;">
+									<div id="overallReviews" class="tile-container">
+									<h3 class="title">Live NodeManagers:</h3>									
+									
+								     	<div class="inner-container">	
+									<div id="hiddenReviewTable"></div>								
+									<div id="DLFConsolidated" data-percent="0" data-whetherrendered ="0" class="donut"></div>
+									
+									</div>
+									
+									</div>
+									</div>
+									</li>
+									
+
+									
+									
+									
+									<!--  
+									<li class="ui-state-default">
+									<div id="yarnmemostat" class="tile-container">
+									<h3 class="title">YARN Memory</h3>
+									<div class="inner-container">
+									<div id="yarn_memo_usage" data-percent="0" data-whetherrendered ="0" class="donut"></div>
+									</div>
+									<div class="hidden-info">
+										<div>
+									        <img src="data:image/gif;base64,R0lGODlhEAAQAPMAAP///wAAAAAAAIKCgnJycqioqLy8vM7Ozt7e3pSUlOjo6GhoaAAAAAAAAAAAAAAAACH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAAEKxDISau9OE/Bu//cQBTGgWDhWJ5XSpqoIL6s5a7xjLeyCvOgIEdDLBqPlAgAIfkECQoAAAAsAAAAABAAEAAABCsQyEmrvThPwbv/XJEMxIFg4VieV0qaqCC+rOWu8Yy3sgrzoCBHQywaj5QIACH5BAkKAAAALAAAAAAQABAAAAQrEMhJq704T8G7/9xhFMlAYOFYnldKmqggvqzlrvGMt7IK86AgR0MsGo+UCAAh+QQJCgAAACwAAAAAEAAQAAAEMRDISau9OE/Bu/+cghxGkQyEFY7lmVYraaKqIMpufbc0bLOzFyXGE25AyI5myWw6KREAIfkECQoAAAAsAAAAABAAEAAABDYQyEmrvThPwbv/nKQgh1EkA0GFwFie6SqIpImq29zWMC6xLlssR3vdZEWhDwBqejTQqHRKiQAAIfkECQoAAAAsAAAAABAAEAAABDYQyEmrvThPwbv/HKUgh1EkAyGF01ie6SqIpImqACu5dpzPrRoMpwPwhjLa6yYDOYuaqHRKjQAAIfkECQoAAAAsAAAAABAAEAAABDEQyEmrvThPwbv/nKUgh1EkAxFWY3mmK9WaqCqIJA3fbP7aOFctNpn9QEiPZslsOikRACH5BAkKAAAALAAAAAAQABAAAAQrEMhJq704T8G7/xymIIexEOE1lmdqrSYqiGTsVnA7q7VOszKQ8KYpGo/ICAAh+QQJCgAAACwAAAAAEAAQAAAEJhDISau9OE/Bu/+cthBDEmZjeWKpKYikC6svGq9XC+6e5v/AICUCACH5BAkKAAAALAAAAAAQABAAAAQrEMhJq704T8G7/xy2EENSGOE1lmdqrSYqiGTsVnA7q7VOszKQ8KYpGo/ICAAh+QQJCgAAACwAAAAAEAAQAAAEMRDISau9OE/Bu/+ctRBDUhgHElZjeaYr1ZqoKogkDd9s/to4Vy02mf1ASI9myWw6KREAIfkECQoAAAAsAAAAABAAEAAABDYQyEmrvThPwbv/HLUQQ1IYByKF01ie6SqIpImqACu5dpzPrRoMpwPwhjLa6yYDOYuaqHRKjQAAIfkECQoAAAAsAAAAABAAEAAABDYQyEmrvThPwbv/nLQQQ1IYB0KFwFie6SqIpImq29zWMC6xLlssR3vdZEWhDwBqejTQqHRKiQAAIfkECQoAAAAsAAAAABAAEAAABDEQyEmrvThPwbv/3EIMSWEciBWO5ZlWK2miqiDKbn23NGyzsxclxhNuQMiOZslsOikRADsAAAAAAAAAAAA=" />
+										</div>
+									</div>
+									</div>
+									</li>
+									-->
+									
+									
+									
+									</ul>
+									
+									
+									
+									<div id="memographpopup" style="display:none;">
+										<div  style="position: relative; display: inline-block;color:#333333; font-family: Arial, Helvetica, sans-serif; overflow:hidden;">
+										<div id="memographpopup_y_axis" style="color:#333333; position: absolute; top: 0px; bottom: 0; width: 60px;"></div>
+										<div id="memographpopup_chart" style="color:#333333;position: relative;left: 60px;"></div>
+										</div>
+										<div id="memographpopup_legends" style=" display: inline-block; vertical-align: top; margin: 0 0 0 10px;width:175px; text-align:left;"></div>
+									</div>
+									<div id="cpugraphpopup" style="display:none;">
+										<div  style="position: relative; display: inline-block;color:#333333; font-family: Arial, Helvetica, sans-serif; overflow:hidden;">
+										<div id="cpugraphpopup_y_axis" style="color:#333333; position: absolute; top: 0px; bottom: 0; width: 60px;"></div>
+										<div id="cpugraphpopup_chart" style="color:#333333;position: relative;left: 60px;"></div>
+										</div>
+										<div id="cpugraphpopup_legends" style=" display: inline-block; vertical-align: top; margin: 0 0 0 10px;width:175px; text-align:left;"></div>
+									</div>	
+                    			
+                		 </div>
+            		</div>
+				</div>
+			</div>
+	<div id="externalPopup"></div>	
+        </div>
+</html>
